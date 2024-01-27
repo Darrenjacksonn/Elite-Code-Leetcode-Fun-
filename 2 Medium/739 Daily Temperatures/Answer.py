@@ -5,7 +5,7 @@ from typing import List, Optional
 # it works backwards through to find all the previous orphans that are smaller than the current temp
 
 class Solution:
-    def dailyTemperatures(self, temperatures):
+    def daily_temperatures(self, temperatures: List[int]) -> List[int]:
         
         output = [0 for _ in range(len(temperatures))]
         
