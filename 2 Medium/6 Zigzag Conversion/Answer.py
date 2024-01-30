@@ -9,6 +9,7 @@ class Solution:
         output = [ '' for _ in range(numRows) ]
         # entry_row dictates which row to input character of s. 
         entry_row = 0
+        
         for char in s:
 
             # direction flips at top and bottom of zigzag pattern
