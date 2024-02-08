@@ -5,14 +5,15 @@ class Solution:
         
         # sliding window
 
-        left = 0
+        l = 0
         max_profit = 0
 
-        for price in prices:
-            max_profit = max( max_profit , price - prices[left] )
-            
-            while price < prices[left]:
-                left += 1
+        for r in range(len(prices)):
+
+            max_profit = max( max_profit , prices[r] - prices[l] )
+
+            if prices[r] < prices[l]:
+                l = r
 
         return max_profit
 
