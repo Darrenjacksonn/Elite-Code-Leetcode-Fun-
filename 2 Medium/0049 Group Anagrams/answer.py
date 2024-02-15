@@ -9,14 +9,14 @@ class Solution:
 
         # Sort every string and add the sorted version to the key of a dictionary, if the key already exists, the string is \n
         # an anagram with another string that matches this key, so append to this keys corresponding value list.
-        for string in strs:
-            sorted_str = ''.join(sorted(string))
-            my_dict[sorted_str].append(string)
+        for word in strs:
+            sorted_word = ''.join(sorted(word))
+            my_dict[sorted_word].append(word)
         
         # Convert the values of the dict into an output list
         output = []
-        for key in my_dict:
-            output.append(my_dict.get(key))
+        for value in my_dict.values():
+            output.append(value)
 
         return output
 
@@ -24,10 +24,10 @@ class Solution:
 
 sol = Solution()
 strs = ["eat","tea","tan","ate","nat","bat"]
-print(sol.group_anagrams(strs))
+print(sol.group_anagrams(strs)) # [["bat"],["nat","tan"],["ate","eat","tea"]]
 
 strs = [""]
-print(sol.group_anagrams(strs))
+print(sol.group_anagrams(strs)) # [['']]
 
 strs = ["a"]
-print(sol.group_anagrams(strs))
+print(sol.group_anagrams(strs)) # [['a']]

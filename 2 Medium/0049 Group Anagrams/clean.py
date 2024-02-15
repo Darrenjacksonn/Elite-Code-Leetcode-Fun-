@@ -3,14 +3,15 @@ from collections import defaultdict
 
 class Solution:
     def group_anagrams(self, strs: List[str]) -> List[List[str]]:
+
         my_dict = defaultdict(list)
 
-        for string in strs:
-            sorted_str = ''.join(sorted(string))
-            my_dict[sorted_str].append(string)
+        for word in strs:
+            sorted_word = ''.join(sorted(word))
+            my_dict[sorted_word].append(word)
         
         output = []
-        for key in my_dict:
-            output.append(my_dict.get(key))
+        for value in my_dict.values():
+            output.append(value)
 
         return output
