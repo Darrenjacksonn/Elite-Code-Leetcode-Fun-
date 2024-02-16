@@ -8,7 +8,7 @@ class ListNode:
         self.next = next
     
 
-# Custom print function to print the value of each element occuring after the iputted node
+# Custom print function to print the value of each element occuring after the inputted node
 def print_list(node):
     if not node:
         return ValueError("Node does not exist")
@@ -22,7 +22,7 @@ def print_list(node):
 
 
 class Solution:
-    def mergeTwoLists(self, head1: Optional[ListNode], head2: Optional[ListNode]) -> Optional[ListNode]:
+    def merge_two_linked_lists(self, head1: Optional[ListNode], head2: Optional[ListNode]) -> Optional[ListNode]:
 
         # If neither exist, return None.
         if not head1 and not head2:
@@ -88,4 +88,4 @@ b = ListNode(3,c)
 head2 = ListNode(1,b)
 print_list(head2) # [1,3,4]
 
-print_list(sol.mergeTwoLists(head1, head2)) # [1, 1, 2, 3, 4, 4]
+print_list(sol.merge_two_linked_lists(head1, head2)) # [1, 1, 2, 3, 4, 4]

@@ -6,7 +6,7 @@ class ListNode:
         self.next = next
     
 class Solution:
-    def mergeTwoLists(self, head1: Optional[ListNode], head2: Optional[ListNode]) -> Optional[ListNode]:
+    def merge_two_linked_lists(self, head1: Optional[ListNode], head2: Optional[ListNode]) -> Optional[ListNode]:
 
         if not head1 and not head2:
             return None
